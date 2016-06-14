@@ -9,11 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    
+    //Outlets
 
     @IBOutlet weak var printLbl: UILabel!
     
@@ -28,6 +25,32 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var chestBtn: UIButton!
+    
+    //Characters
+    
+    var player: Player!
+    var enemy: Enemy!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        player = Player(name: "Wicked Pissa", hp: 110, attackPwr: 20)
+        
+        generateRandomEnemy()
+        
+        playerHpLbl.text = "\(player.hp) HP"
+    }
+    
+    func generateRandomEnemy() {
+        let rand = Int(arc4random_uniform(2))
+        
+        if rand == 0 {
+            enemy = Chimara(startingHp: 50, attackPwr: 12)
+        } else {
+            enemy = DevilWizard(startingHp: 60, attackPwr: 15)
+        }
+    }
     
     
    
