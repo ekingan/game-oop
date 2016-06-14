@@ -44,6 +44,8 @@ class ViewController: UIViewController {
     }
     
     func generateRandomEnemy() {
+        
+        // random number between 0 and 1
         let rand = Int(arc4random_uniform(2))
         
         if rand == 0 {
@@ -68,6 +70,7 @@ class ViewController: UIViewController {
         chestBtn.hidden = true
         printLbl.text = chestMsg
         
+        //Timer for 2 seconds
         NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: "generateRandomEnemy", userInfo: nil, repeats: false)
     }
 
