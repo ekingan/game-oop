@@ -15,9 +15,30 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBOutlet weak var printLbl: UILabel!
+    
+    
+    @IBOutlet weak var playerHpLbl: UILabel!
+    
+    
+    @IBOutlet weak var enemyHpLbl: UILabel!
+    
+    
+    @IBOutlet weak var enemyImg: UIImageView!
+    
+    
+    @IBOutlet weak var chestBtn: UIButton!
+    
+    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+  
+    
+    @IBAction func onChestTapped(sender: AnyObject) {
     }
 
 
