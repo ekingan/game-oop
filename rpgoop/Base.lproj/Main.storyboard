@@ -39,7 +39,7 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0l-cu-XTg" userLabel="chest">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0l-cu-XTg" userLabel="chest">
                                 <rect key="frame" x="431" y="333" width="130" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="GaD-PX-cxH"/>
@@ -88,7 +88,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="154" id="vSk-Rk-n31"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Player Attacked wild Chimara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma1-2e-vAI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press the button to attack!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ma1-2e-vAI">
                                 <rect key="frame" x="100" y="49" width="392" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="GBY-mw-oJQ"/>
@@ -120,6 +120,17 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nyx-i3-OcO" userLabel="attack">
+                                <rect key="frame" x="473" y="487" width="88" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="abb-ac-xn5"/>
+                                    <constraint firstAttribute="width" constant="88" id="ae4-Ti-ILc"/>
+                                </constraints>
+                                <state key="normal" image="attack"/>
+                                <connections>
+                                    <action selector="attackBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HsA-nN-j0Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -143,6 +154,7 @@
                             <constraint firstItem="c4b-N9-VW8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZCn-j6-mVW"/>
                             <constraint firstItem="Wn0-0s-5EH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="a5K-he-JcQ"/>
                             <constraint firstItem="xbd-nz-d2e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="am3-iR-EMm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nyx-i3-OcO" secondAttribute="trailing" constant="19" id="cXb-f5-JWB"/>
                             <constraint firstItem="Waa-IT-U5q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-27" id="dvc-Ek-aIZ"/>
                             <constraint firstItem="Waa-IT-U5q" firstAttribute="top" secondItem="a8f-Pp-tOX" secondAttribute="bottom" id="gK7-JE-XLM"/>
                             <constraint firstItem="Waa-IT-U5q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="458" id="h2k-u6-Cf0"/>
@@ -153,6 +165,7 @@
                             <constraint firstItem="xbd-nz-d2e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qTq-1X-1J4"/>
                             <constraint firstItem="Wn0-0s-5EH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="sPd-Pu-1yH"/>
                             <constraint firstItem="xbd-nz-d2e" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uiD-cn-yqM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nyx-i3-OcO" secondAttribute="bottom" constant="14" id="uiW-F3-9DK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Waa-IT-U5q" secondAttribute="trailing" constant="-29" id="whv-va-Sr2"/>
                             <constraint firstAttribute="trailing" secondItem="f0l-cu-XTg" secondAttribute="trailing" constant="39" id="xDp-RB-aCf"/>
                             <constraint firstItem="qdC-WI-BUX" firstAttribute="centerY" secondItem="gig-n6-YAe" secondAttribute="centerY" id="xZF-RQ-LIb"/>
@@ -190,6 +203,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="attack" width="198" height="223"/>
         <image name="bg" width="768" height="1024"/>
         <image name="chest" width="393" height="440"/>
         <image name="enem1" width="574" height="487"/>
